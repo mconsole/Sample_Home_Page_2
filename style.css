@@ -1,0 +1,278 @@
+/* Site was built with a mobile first design scheme and the baseline css is for screens up to 768px */
+
+
+/* General Styling */
+
+body {
+    background: #bdc3c7;
+    margin-top: 15%;
+}
+
+.row {
+    padding: 1%;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.container {
+    padding: 5% 0 0 0;
+}
+
+.equalSpace {
+    display: flex;
+    justify-content: space-around;
+    vertical-align: middle;
+}
+h6 {
+    padding: 0;
+    margin: 0 0 3% 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.noPadRight {
+    padding-right: 0;
+}
+
+.noPadLeft {
+    padding-left: 0;
+}
+
+.bodyBlock .row {
+    margin-bottom: 5%;
+    background: white;
+    padding: 2%;
+}
+
+a {
+    color: #2980b9;
+}
+
+
+/* Navigation Bar */
+
+.dropdown-menu {
+    text-align: left;
+}
+
+#browseBtn {
+    text-align: left;
+    width: 310px;
+}
+
+.navbar {
+    border-radius: 0;
+    margin-bottom: 1%;
+}
+
+.navbar-nav>li {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+nav li {
+    display: inline;
+    float: left;
+}
+
+.dropList li {
+    display: list-item;
+    float: none;
+}
+
+#browseList button {
+    padding-left: 0;
+}
+
+
+/* Add new post */
+
+#post {
+    padding: 2% 1% 2% 1%;
+}
+
+.input-group-addon {
+    background: #34495e;
+}
+
+#addPost {
+    margin-bottom: 0;
+}
+
+#addPost li {
+    padding: 0 2% 0 2%;
+}
+
+#addImg {
+    padding-left: 2%;
+    font-size: 16px;
+}
+
+
+/* Profile tab */
+
+#profile .row {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#profile .row img {
+    box-shadow: 8px 8px 8px grey;
+}
+
+#interests {
+    text-align: left;
+}
+
+#member p {
+    color: #95a5a6;
+    font-size: 14px;
+    text-align: right;
+}
+#profile {
+  height: 475px;
+}
+
+/* Latest Posts tab */
+
+p {
+    margin: 3% 0 0 0;
+    font-weight: bold;
+}
+#latestPosts {
+  height: 475px;
+}
+
+/* Footer */
+
+.footer {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.footer p {
+    font-size: 12px;
+}
+.postTitle img {
+  width: 100%;
+}
+.postAge {
+  color: grey;
+  font-size: 12px;
+}
+#postScroll {
+  padding: 5%;
+  overflow-y: scroll;
+  height: 375px;
+}
+#postScroll .row {
+  margin-bottom: 0;
+}
+#postScroll a {
+  font-size: 14px;
+}
+.postBody p {
+  font-size: 14px;
+  font-weight: normal;
+}
+.singlePost {
+  border-bottom: 1px solid grey;
+}
+
+/* Responsive */
+@media (min-width: 375px) {
+  #profile, #latestPosts {
+    height: 500px;
+  }
+  #postScroll {
+    height: 410px;
+  }
+  .container {
+    padding-top: 2%;
+  }
+}
+
+@media (min-width: 425px) {
+  .container {
+    padding-top: 0;
+  }
+  #postScroll {
+    height: 410px;
+  }
+  .footer {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
+
+@media (min-width: 768px) {
+    #navbarSpacing {
+        display: flex;
+        justify-content: space-around;
+        vertical-align: middle;
+    }
+    .dropdown-menu {
+        width: 500px;
+        margin-top: 0;
+        border-radius: 0;
+        text-align: center;
+    }
+    .navbar-nav>li>.dropdown-menu {
+        margin-top: 0;
+        border-radius: 0;
+        width: 300px;
+        text-align: left;
+    }
+}
+
+
+/* Navigation bar adjustment to stay as a dropdown until over 991px width */
+@media (max-width: 991px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 0;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in {
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
+    #browseBtn {
+        padding-left: 15px
+    }
+    .navBadge, #browseList {
+        padding-top: 6px;
+    }
+    .navBadge {
+        margin-right: 0;
+    }
+}

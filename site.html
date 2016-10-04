@@ -1,0 +1,339 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Susanne Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href=".\Assets\Bootstrap\bootstrap-3.3.7-dist\css\bootstrap.min.css">
+
+        <!-- Flat UI -->
+        <link rel="stylesheet" href=".\Assets\Flat-UI-master\dist\css\flat-ui.css">
+
+        <!-- Primary css file -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <!-- Navigation bar start -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <i class="glyphicon glyphicon-home"></i>
+                GOYT</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse-01">
+            <div id="navbarSpacing" class="nav navbar-nav col-xs-12 col-md-10 noPadRight">
+                <div id="browseList" class="btn-group col-sm-3 noPadLeft">
+                    <button id="browseBtn" class="btn btn-inverse dropdown-toggle col-xs-12 noPadLeft noPadRight" type="button" data-toggle="dropdown">
+                        Browse GOYT
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-inverse" role="menu">
+                        <li class="col-xs-5 col-sm-3 noPadLeft noPadRight">
+                            <a href="site.html">Home</a>
+                        </li>
+                        <li class="col-xs-5 col-sm-3 noPadLeft noPadRight">
+                            <a href="#">My Profile</a>
+                        </li>
+                        <li class="col-xs-5 col-sm-3 noPadLeft noPadRight">
+                            <a href="calendar.html">My Calendar</a>
+                        </li>
+                        <li class="col-xs-5 col-sm-3 noPadLeft noPadRight">
+                            <a href="site.html">My Dashboard</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="navbar-form col-xs-12 col-sm-5" action="#" role="search">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input class="form-control" id="navbarInput-01" type="search" placeholder="Search profiles">
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn">
+                                    <span class="fui-search"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav navbar-right equalSpace col-sm-4 navBadge">
+                    <li>
+                        <button class="btn btn-inverse dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="flase">
+                            <i class="glyphicon glyphicon-envelope"></i>
+                            <span class="badge">7</span>
+                        </button>
+                        <ul class="dropdown-menu dropList" aria-labelledby="dropdownMenu1">
+                            <li>
+                                <a href="#">Message 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Message 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Message 3</a>
+                            </li>
+                            <li>
+                                <a href="#">See all</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button class="btn btn-inverse dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="glyphicon glyphicon-bell"></i>
+                            <span class="badge">9</span>
+                        </button>
+                        <ul class="dropdown-menu dropList" aria-labelledby="dropdownMenu2">
+                            <li>
+                                <a href="#">Notification 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Notification 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Notification 3</a>
+                            </li>
+                            <li>
+                                <a href="#">See all</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button class="btn btn-inverse dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <span class="badge">3</span>
+                        </button>
+                        <ul class="dropdown-menu dropList" aria-labelledby="dropdownMenu3">
+                            <li>
+                                <a href="#">New Friend 1</a>
+                            </li>
+                            <li>
+                                <a href="#">New Friend 2</a>
+                            </li>
+                            <li>
+                                <a href="#">New Friend 3</a>
+                            </li>
+                            <li>
+                                <a href="#">See all</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+    <!-- /navbar -->
+
+    <body>
+        <div class="container">
+            <!-- Left side bar for medium screens and larger only -->
+            <div class="bodyBlock col-xs-12 col-md-3"></div>
+
+            <!-- Middle content area containing posts and profile information for smaller screens -->
+            <div class="bodyBlock col-xs-12 col-md-6">
+                <!-- Top bar for added a status or image -->
+                <div class="row">
+                    <ul id="addPost">
+                        <li id="post" class="input-group">
+                            <input type="text" class="form-control" placeholder="What's on your mind?"/>
+                            <span class="input-group-addon ">
+                                <i class="glyphicon glyphicon-send"></i>
+                            </span>
+                        </li>
+                        <li>
+                            <a id="addImg" href="#">Add Image</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Middle tab area for profile information and posts -->
+                <div class="row">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a class="tab" data-toggle="tab" href="#profile">Profile</a>
+                        </li>
+                        <li>
+                            <a class="tab" data-toggle="tab" href="#latestPosts">Posts</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <!-- Profile -->
+                        <div id="profile" class="tab-pane fade in active">
+                          <div id="profileScroll">
+                            <div class="row">
+                                <img src="https://www.fillmurray.com/200/150">
+                                <p>Bill Murray (@Bill_M63)</p>
+                            </div>
+                            <div class="row">
+                                <span>
+                                    <a href="#">Edit my profile</a>
+                                    |
+                                    <a href="#">Manage Programs</a>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <p>Program Interests:</p>
+                                <ul>
+                                    <li>
+                                        <a href="#">Education & Career</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Life Skills</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Health & Wellness</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Finance</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="member" class="row">
+                                <p>Member since 2015</p>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Posts -->
+                        <div id="latestPosts" class="tab-pane fade">
+                            <div class="row">
+                                <p class="col-xs-6">Latest Posts</p>
+                                <div id="filter" class="btn-group col-xs-6">
+                                    <button class="btn btn-inverse dropdown-toggle" type="button" id="dropdownMenu4" data-toggle="dropdown">
+                                        Filter Posts by
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-inverse" role="menu" aria-labelledby="dropdownMenu4">
+                                        <li>
+                                            <a href="#">Date (newest)</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Users only</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Organizations only</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Scrolling post display area -->
+                            <div id="postScroll" class="row">
+                                <div class="singlePost">
+                                    <div class="row postTitle">
+                                        <div class="col-xs-3">
+                                            <img src=".\Images\books.jpg">
+                                        </div>
+                                        <div class="col-xs-9">
+                                            <a href="#"><h6>Youth Reading Explosion</h6></a>
+                                            <p class="postAge">4 Days Ago
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 postBody">
+                                                <p>Thank you to all of the bolunteers who came out to get the YRE kicked off! We couldn't have done it without you. Looking forward to a great season! stay tuned for all program updates.
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <span>
+                                                        <a href="#">Like
+                                                            <span class="badge">40</span>
+                                                        </a>
+                                                        <a href="#">
+                                                            | Comment
+                                                            <span class="badge">12</span>
+                                                        </a>
+                                                        <a href="#">
+                                                            | Share</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="singlePost">
+                                            <div class="row postTitle">
+                                                <div class="col-xs-3">
+                                                    <img src=".\Images\books.jpg">
+                                                </div>
+                                                <div class="col-xs-9">
+                                                    <a href="#"><h6>Youth Reading Explosion</h6></a>
+                                                    <p class="postAge">4 Days Ago
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-12 postBody">
+                                                        <p>Thank you to all of the bolunteers who came out to get the YRE kicked off! We couldn't have done it without you. Looking forward to a great season! stay tuned for all program updates.
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            <span>
+                                                                <a href="#">Like
+                                                                    <span class="badge">40</span>
+                                                                </a>
+                                                                <a href="#">
+                                                                    | Comment
+                                                                    <span class="badge">12</span>
+                                                                </a>
+                                                                <a href="#">
+                                                                    | Share</a>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="singlePost">
+                                                    <div class="row postTitle">
+                                                        <div class="col-xs-3">
+                                                            <img src=".\Images\books.jpg">
+                                                        </div>
+                                                        <div class="col-xs-9">
+                                                            <a href="#"><h6>Youth Reading Explosion</h6></a>
+                                                            <p class="postAge">4 Days Ago
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xs-12 postBody">
+                                                                <p>Thank you to all of the bolunteers who came out to get the YRE kicked off! We couldn't have done it without you. Looking forward to a great season! stay tuned for all program updates.
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-xs-12">
+                                                                    <span>
+                                                                        <a href="#">Like
+                                                                            <span class="badge">40</span>
+                                                                        </a>
+                                                                        <a href="#">
+                                                                            | Comment
+                                                                            <span class="badge">12</span>
+                                                                        </a>
+                                                                        <a href="#">
+                                                                            | Share</a>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Right side bar for medium screens and larger only -->
+                                        <div class="bodyBlock col-xs-12 col-md-3"></div>
+                                    </div>
+
+                                    <!-- Footer area containing legal information -->
+                                    <div class="footer">
+                                        <p>&copy; 2016 GOYT All Rights reserved. Confidential and Proprietary information of Get Our Youth There, Inc.
+                                        </div>
+
+                                        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+                                        <script src=".\Assets\jquery\dist\jquery.min.js"></script>
+
+                                        <!-- Flat UI to be used in conjunction with Bootstrap -->
+                                        <script src=".\Assets\Flat-UI-master\dist\js\flat-ui.min.js"></script>
+
+                                        <!-- Include all compiled plugins (below), or include individual files as needed -->
+                                        <script src=".\Assets\Bootstrap\bootstrap-3.3.7-dist\js\bootstrap.min.js"></script>
+
+                                        <!-- Primary javascript file -->
+                                        <script src="script.js"></script>
+                                    </body>
