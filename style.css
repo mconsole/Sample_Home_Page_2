@@ -113,10 +113,16 @@ nav li {
 
 
 /* Profile tab */
-
+.leftProfile {
+  display: none;
+}
+.centerProfile {
+  display: block;
+}
 #profile .row {
     margin: 0 auto;
     text-align: center;
+    width: 100%;
 }
 
 #profile .row img {
@@ -137,7 +143,12 @@ nav li {
 }
 
 /* Latest Posts tab */
-
+.smallPosts {
+  display: block;
+}
+.mediumPosts {
+  display: none;
+}
 p {
     margin: 3% 0 0 0;
     font-weight: bold;
@@ -151,6 +162,7 @@ p {
 .footer {
     text-align: center;
     margin-top: 5%;
+    margin-bottom: 1%;
 }
 
 .footer p {
@@ -206,9 +218,18 @@ p {
     padding-left: 2%;
     padding-right: 2%;
   }
+  #filter {
+    float: right;
+  }
 }
 
 @media (min-width: 768px) {
+  body {
+    margin-top: 6%;
+  }
+  .container .row {
+    margin-top: 3%;
+  }
     #navbarSpacing {
         display: flex;
         justify-content: space-around;
@@ -226,8 +247,65 @@ p {
         width: 300px;
         text-align: left;
     }
+    .bodyBlock .row {
+        margin-bottom: 0;
+    }
+    .singlePost .postTitle {
+      padding: 0;
+    }
+    .singlePost {
+      margin-bottom: 3%;
+    }
+    .postTitle p {
+      font-size: 16px;
+    }
+    h6 {
+      font-size: 24px;
+    }
+    #profileScroll .row {
+      padding: 1%;
+    }
+    #profileScroll img {
+      padding-top: 1%;
+    }
+    #profile, #latestPosts {
+      height: 525px;
+    }
+    #postScroll {
+      height: 430px;
+    }
+    #latestPosts p {
+      font-size: 18px;
+    }
 }
 
+@media (min-width: 991px) {
+  .leftProfile {
+    display: block;
+    margin-top: 5%;
+  }
+  .centerProfile {
+    display: none;
+  }
+  .mediumPosts {
+    display: block;
+  }
+  .mediumPosts #postScroll {
+    margin-top: 0;
+  }
+  .smallPosts {
+    display: none;
+  }
+  #profileScroll div {
+    background: #bdc3c7;
+  }
+  #profile, #latestPosts {
+    height: 1100px;
+  }
+  #postScroll {
+    height: 1050px;
+  }
+}
 
 /* Navigation bar adjustment to stay as a dropdown until over 991px width */
 @media (max-width: 991px) {
