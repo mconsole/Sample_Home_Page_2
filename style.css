@@ -138,8 +138,43 @@ nav li {
     font-size: 14px;
     text-align: right;
 }
-#profile {
-  height: 475px;
+
+/* My Programs Area */
+.orgs {
+    height: 450px;
+    overflow-y: scroll;
+}
+
+.orgs p {
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+.orgs a {
+    color: #2980b9;
+}
+
+.orgs ul {
+    padding: 0;
+    text-align: left;
+    float: none;
+}
+
+.org {
+    border: 1px solid grey;
+    margin-bottom: 3%;
+    width: 99%;
+}
+
+.orgTitle {
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+.orgImage {
+    display: none;
 }
 
 /* Latest Posts tab */
@@ -153,7 +188,7 @@ p {
     margin: 3% 0 0 0;
     font-weight: bold;
 }
-#latestPosts {
+#latestPosts, #profile, #programs {
   height: 475px;
 }
 
@@ -261,6 +296,9 @@ p {
     }
     h6 {
       font-size: 24px;
+    }
+    .orgImage {
+        display: block;
     }
     #profileScroll .row {
       padding: 1%;
